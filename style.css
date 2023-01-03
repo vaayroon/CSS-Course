@@ -1,16 +1,114 @@
 * {
     font-family: 'Lobster', cursive;
     font-weight: 100;
-    font-size: 40px;
+    font-size: 20px;
+}
+/*PSEUDO-ELEMENTS: {
+    ::first-line --> BLOCK
+    ::first-letter --> BLOCK
+    ::placeholder
+    ::selection
+    ::after --> Childrens - Content (needed) - INLINE
+    ::before --> Childrens - Content (needed) - INLINE
+}
+It is and element that is not part of the DOM¿?
+
+*/
+
+b {
+    padding: 6px;
+    width: 100%;
 }
 
+b::before {
+    content: "Hi";
+    color: purple
+}
+
+b::after {
+    content: "everyone";
+    color: green;
+}
+
+form {
+    margin: 100px auto;
+    display: block;
+    background-color: #555;
+    padding: 100px;
+    width: 50%;
+}
+
+input {
+    padding: 6px;
+    width: 100%;
+}
+
+input::placeholder {
+    color: red;
+    font-size: 1.4em;
+    background-color: yellow;
+}
+
+input::selection {
+    color: blue;
+    font-size: 0.1em;
+    background-color: green;
+}
+
+.text {
+    padding: 20;
+}
+
+.text::first-letter {
+    color: red;
+    font-size: 3em;
+}
+
+.text::first-line {
+    color: blue;
+    font-size: 2em;
+}
+
+/*Float:(Left,Right) It is not used to layout anymore
+
+*/
+.fcont {
+    margin: auto;
+    margin-top: 50px;
+    border: 4px solid red;
+    background: grey;
+    width: 50%;
+}
+
+.fcont p {
+    float: left;
+    width: 50%;
+}
+
+.fcont img {
+    float: left;
+    width: 100px;
+}
+
+.fcontainer div {
+    width: 50%;
+    float: right;
+}
+
+.primary {
+    background: red;
+}
+
+.secondary {
+    background: yellow;
+}
 /*Overflow: What we do with the content doesnt fit the div
 visible, hidden, auto(scroll if needed), scroll(for scroll)
 overflow-{x,y}: overflox-x set scroll on overflow-y, but not vice versa
     overflow-x scrol, then overflow-y hidde id needed
 */
 
-div {
+.cont {
     margin: auto;
     margin-top: 50px;
     width: 320px;
@@ -20,7 +118,7 @@ div {
     overflow: hidden;
 }
 
-img {
+.cont img {
     width: 320px;
     position: relative;
     top: 60px;
@@ -29,7 +127,7 @@ img {
     transition: all 1.2s;
 }
 
-div:hover > img {
+.cont:hover > img {
     width: 320px;
     height: 350px;
     position: relative;
@@ -45,7 +143,7 @@ Inline-Block: We can define block dimensions
 Flex and Grid behavevs as block but all inside them not¿?
 */
 
-p {
+.pclass {
     width: 200px;
     height: 150px;
     margin: 20px;
