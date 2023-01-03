@@ -1,0 +1,100 @@
+* {
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+/*Overflow: What we do with the content doesnt fit the div
+visible, hidden, auto(scroll if needed), scroll(for scroll)
+overflow-{x,y}: overflox-x set scroll on overflow-y, but not vice versa
+    overflow-x scrol, then overflow-y hidde id needed
+*/
+
+div {
+    margin: auto;
+    margin-top: 50px;
+    width: 320px;
+    height: 350px;
+    border: 4px solid red;
+    background: grey;
+    overflow: hidden;
+}
+
+img {
+    width: 320px;
+    position: relative;
+    top: 60px;
+    left: 40px;
+    outline: 2px solid blue;
+    transition: all 1.2s;
+}
+
+div:hover > img {
+    width: 320px;
+    height: 350px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    outline: 2px solid blue;
+}
+
+/*Display Properties - Block, Inline and Inline block
+Block: takes up all
+Inline: takes up the same as its content
+Inline-Block: We can define block dimensions
+Flex and Grid behavevs as block but all inside them not¿?
+*/
+
+p {
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    border: 10px solid red;
+    background: yellow;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+
+/*Position fixed and sticky
+Fixed: is used in navbars or Heads for example
+Sticky: behaves as fixed one we reach it
+*/
+
+
+.fixed-box {
+    background: red;
+    position: sticky;
+    opacity: .3;
+    top: 0;
+}
+
+/*Position absolute and relative*/
+
+.container {
+    position: relative;
+    border: 4px solid red;
+    height: 450px;
+    width: 450px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.box1 {
+    top: 0;
+}
+
+.box2 {
+    right: 0;
+}
+
+.box3 {
+    right: 0;
+    bottom: 0;
+}
+
+.box4 {
+    bottom: 0;
+}
+
