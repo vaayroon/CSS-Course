@@ -1,8 +1,163 @@
 * {
-    font-family: 'Lobster', cursive;
+    font-family: 'Hack', monospace;
     font-weight: 100;
     font-size: 20px;
 }
+
+/* Colors: Color Name, HEX, RGB, RGBA, HSL, HSLA
+    Color Name: red, blue, darksalmon, etc
+    HEX: #ff0000, #0000ff, #ffa500, etc
+    RGB: rgb(255, 0, 0), rgb(0, 0, 255), rgb(255, 165, 0), etc --> It comes from Red, Green, Blue
+    RGBA: rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5), rgba(255, 165, 0, 0.5), etc --> It comes from Red, Green, Blue, Alpha. Where alpha indicates the opacity
+    HSL: hsl(0, 100%, 50%), hsl(240, 100%, 50%), hsl(30, 100%, 50%), etc --> It comes from Hue, Saturation, Lightness
+    HSLA: hsla(0, 100%, 50%, 0.5), hsla(240, 100%, 50%, 0.5), hsla(30, 100%, 50%, 0.5), etc --> It comes from Hue, Saturation, Lightness, Alpha. Where alpha indicates the opacity
+*/
+
+.boxColor {
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    border: 3px solid #000;
+    background: rgba(150, 150, 150, .5);
+}
+
+.boxColorHex {
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    border: 3px solid #000;
+    background: #48e;
+}
+
+/* Cursor:
+    Let us change the cursor type when we are over an element
+*/
+
+.boxCursor {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    border: 5px solid red;
+    margin: 45px;
+    cursor: pointer;
+}
+.boxCursor:active {
+    cursor: row-resize;
+}
+
+/* OBJECT-FIT: contain, cover, none, scale-down, fill
+    contain: The image keeps its original size, but it is scaled to fit the box
+    cover: The image keeps its original size, but it is scaled to cover the box. The image is clipped to fit the box.
+    none: The image keeps its original size, and is not scaled to fit the box. The image will be cut off if it is larger than the box.
+    scale-down: The image keeps its original size, but scales down to fit the box if needed.
+    fill: The image will stretch to fit the box. (Default)
+*/
+
+.boxObjectFit {
+    margin: 25px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+}
+
+.boxObjectFit img {
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: scale-down;
+    object-position: -4em;
+}
+
+/* PSEUDO-CLASES
+    :hover --> Listen to mouse events: mouse over, mouse out
+    :link --> Listen to link events: link not visited
+    :visited --> Listen to link events: link visited
+    :active --> Listen to mouse events: mouse down, mouse up
+    :focus --> Listen to keyboard events: focus on element. Usually used with forms
+    :lang --> Listen to language events: language changes
+*/
+
+.boxlang {
+    background: red;
+    margin: 25px;
+    transition: all 1s;
+}
+
+.boxlang b:lang(en) {
+    background: blue;
+}
+
+.boxfocus {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 25px;
+    transition: all 1s;
+}
+
+.boxfocus:focus {
+    background: blue;
+    width: 600px;
+}
+
+.boxactive {
+    width: 250px;
+    height: 250px;
+    background: red;
+    margin: 25px;
+    transition: all 1s;
+}
+
+.boxactive:active {
+    background: blue;
+    width: 600px;
+}
+
+a {
+    margin: 30px;
+    padding: 20px;
+    display: block;
+    color: green;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: blue;
+}
+
+.psuedoclassdiv2 {
+    padding: 20px;
+    background-color: orange;
+    color: #000;
+    transition: background 0.12s, color 1s;
+}
+
+.psuedoclassdiv2:hover {
+    padding: 20px;
+    background: blue;
+    color: #fff;
+}
+
+.psuedoclassdiv {
+    height: 200px;
+    width: 200px;
+    background: blue;
+    /* transition: With this parameter we can set up each transition time
+        we also can specified for all properties */
+    transition: all 1s, border-color 2s;
+    border: 3px solid black;
+}
+
+.psuedoclassdiv:hover {
+    background: yellow;
+    height: 400px;
+    width: 400px;
+    border-color: rgb(57, 202, 0);
+}
+
 /*PSEUDO-ELEMENTS: {
     ::first-line --> BLOCK
     ::first-letter --> BLOCK
@@ -11,8 +166,7 @@
     ::after --> Childrens - Content (needed) - INLINE
     ::before --> Childrens - Content (needed) - INLINE
 }
-It is and element that is not part of the DOM¿?
-
+The content in ::after or ::before  can not be selected because they are not part of the DOM.
 */
 
 b {
