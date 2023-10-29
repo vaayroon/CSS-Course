@@ -1,0 +1,140 @@
+* {
+    font-family: 'Cascadia Code', monospace;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+/* div {
+    width: 45%;
+    display: inline-block;
+    padding: 20px;
+    background: #ddd;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.box2-rd {
+    background: #aaa;
+}
+
+@media only screen and (max-width: 800px) {
+    div {
+        display: block;
+        width: 100%;
+    }
+    h1 {
+        font-size: 20px;
+    }
+} */
+
+.nav__responsive-ul {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #48e;
+    width: 100%;
+    padding-right: 16px;
+}
+
+.nav__li {
+    display: inline-block;
+    padding: 12px;
+    color: #fff;
+}
+.nav__li:hover,
+.nav__li:hover a {
+    color: #000;
+}
+
+.nav__li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__li i {
+    box-sizing: border-box;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.nav__responsive-button-container {
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    background-color: #69c;
+    margin-top: -64px;
+}
+
+.nav__responsive-button {
+    padding: 6px 20px;
+    text-align: right;
+    float: right;
+}
+
+@media only screen and (max-width: 640px) {
+    div.box1-rd,
+    div.box2-rd,
+    .nav__ul {
+        display: none;
+    }
+    
+    .nav {
+        height: 37px;
+        width: 100%;
+    }
+
+    .nav__responsive-ul {
+        display: block;
+        position: absolute;
+        width: 100%;
+        margin-top: 64px;
+        padding-top: 0px;
+        height: 0px;
+    }
+    
+    .nav__li-container {
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        margin-top: -27px;
+        height: calc(100vh - 64px);
+        background: #09f;
+        transition: opacity 0.5s linear;
+        padding-top: 27px;
+        width: 50%;
+    }
+
+    .nav__responsive-li {
+        width: 100%;
+        padding: 9px 20px;
+    }
+
+    .nav__responsive-li i {
+        box-sizing: border-box;
+        text-align: center;
+        margin-right: 5px;
+        width: 30px;
+        color: #016;
+    }
+
+    .nav__responsive-li a {
+        color: #016;
+        text-decoration: none;
+    }
+
+    .nav__responsive-ul:hover > .nav__li-container{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    
+}
+
+
