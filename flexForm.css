@@ -1,0 +1,75 @@
+* {
+    font-family: 'Cascaida Code', sans-serif;
+    font-weight: bold;
+}
+
+.flex-formcontainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #444;
+    margin: 50px 50px;
+}
+
+.flexform {
+    min-width: 400px;
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+}
+
+.flexform__input {
+    min-height: 26px;
+    width: 100%;
+    padding: 7px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 5px solid #088;
+    background: linear-gradient(to right, transparent, #fff);
+}
+
+.flexform__input::placeholder {
+    color: #000;
+}
+
+.flexform__input:focus,
+.flexform__input:not(:placeholder-shown) {
+    border-bottom: 5px solid #fff;
+    color: #fff;
+    background-color: #088615;
+}
+
+.flexform textarea {
+    min-height: 200px;
+    resize: none;
+}
+
+.flexform__imgsection {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+}
+
+.img-container {
+    padding: 20px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.flexform__imgsection img {
+    width: 100%;
+    min-width: 200px;
+}
+
+.flexform input[type="submit"] {
+    background-color: #088615;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

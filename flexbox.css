@@ -1,0 +1,78 @@
+* {
+    font-family: 'Cascadia Code', sans-serif;
+    font-weight: 100;
+}
+
+.flex-container1,
+.flex-container2 {
+    display: flex;
+}
+
+
+.flex-container1 {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    /* flex-flow: row wrap; */
+    justify-content: space-evenly;
+    height: 50vh;
+    /* align-items: flex-start; */
+    align-content: flex-start;
+}
+
+.flex-container2 {
+    flex-direction: row;
+    height: 50vh;
+    justify-content: space-evenly;
+}
+
+.flex-item1,
+.flex-item2 {
+    padding: .5rem;
+    margin: .5rem;
+    color: #000;
+}
+
+.flex-item1 {
+    height: 120px;
+    min-width: 120px;
+    background-color: #08f;
+    /* flex: 1; */
+}
+
+/* Flex Grow: distribute the remaining space between items that match the selector */
+.flex-item2 {
+    height: 100px;
+    width: 100px;
+    background-color: #f60;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.fi2-1 {
+    background-color: #000;
+    color: #fff;
+    order: 6;
+}
+
+.fi2-2 {
+    /* flex-grow: 3;sssssssssssssssss */
+    flex-grow: 1;
+}
+
+.fi2-3 {
+    flex-basis: 300px;
+    flex-shrink: 0.5;
+    background-color: #f0f;
+    order: 4;
+}
+
+.fi2-5 {
+    /* margin-top: auto; */
+    background: #080;
+    align-self: center;
+    flex-grow: 1;
+    order: 2;
+}
+
+/* Order in flex --> The importance is the higher number ot the number itself */
