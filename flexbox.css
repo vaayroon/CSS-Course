@@ -1,0 +1,42 @@
+* {
+    font-family: 'Cascadia Code', sans-serif;
+    font-weight: 100;
+}
+
+.flex-container1,
+.flex-container2 {
+    display: flex;
+}
+
+
+.flex-container1 {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    /* flex-flow: row wrap; */
+    justify-content: space-evenly;
+    height: 100vh;
+    /* align-items: flex-start; */
+    align-content: flex-start;
+}
+
+.flex-container2 {
+    flex-direction: row;
+}
+
+.flex-item1,
+.flex-item2 {
+    padding: .5rem;
+    margin: .5rem;
+    color: #000;
+}
+
+.flex-item1 {
+    height: 120px;
+    min-width: 120px;
+    background-color: #08f;
+    /* flex: 1; */
+}
+
+.flex-item2 {
+    background-color: #f60;
+}
