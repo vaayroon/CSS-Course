@@ -14,13 +14,15 @@
     flex-wrap: wrap-reverse;
     /* flex-flow: row wrap; */
     justify-content: space-evenly;
-    height: 100vh;
+    height: 50vh;
     /* align-items: flex-start; */
     align-content: flex-start;
 }
 
 .flex-container2 {
     flex-direction: row;
+    height: 50vh;
+    justify-content: space-evenly;
 }
 
 .flex-item1,
@@ -37,6 +39,29 @@
     /* flex: 1; */
 }
 
+/* Flex Grow: distribute the remaining space between items that match the selector */
 .flex-item2 {
+    height: 100px;
+    width: 100px;
     background-color: #f60;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.fi2-2 {
+    /* flex-grow: 3;sssssssssssssssss */
+    flex-grow: 1;
+}
+
+.fi2-3 {
+    flex-basis: 300px;
+    flex-shrink: 0.5;
+}
+
+.fi2-5 {
+    /* margin-top: auto; */
+    background: #080;
+    align-self: center;
+    flex-grow: 1;
 }
